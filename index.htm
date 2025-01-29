@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Isiq</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        body{
+            background-color: #000;
+        }
+        #cont{
+            display: flex;
+            justify-content: center;
+            gap: 70px;
+            margin-top: 300px;
+        }
+        #fonar{
+            display: flex;
+            align-items: center;
+        }
+        #qol,#bas,#vereq,#knopka{
+            background-color: #fff;
+            border: 1px solid #000;
+        }
+        #knopka{
+            width: 40px;
+            height: 20px;
+            border-radius: 10px;
+        }
+        #yasil{
+            width: 19px;
+            height: 18px;
+            background-color: #089b00;
+            box-shadow: 0 0 8px 1px #089b00;
+            border: none;
+            border-radius: 50%;
+            transition: 1s;
+            /* float: right; */
+        }
+        #qol{
+            width: 150px;
+            height: 50px;
+            border-radius: 10px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #bas{
+            width: 80px;
+            height: 100px;
+            clip-path: polygon(0% 25%, 100% 0%, 100% 100%, 0% 75%);
+        }
+        #sari{
+            width: 1px;
+            height: 60px;
+            margin-left: 20px;
+            background-color: #edeb7e;
+            border-radius: 40%;
+            box-shadow: 0 0 15px 10px #edeb7e; /*??*/
+            
+            /* opacity: 0;
+            visibility: hidden;
+            transition: opacity 1s, visibility 1s; */
+        }
+        #vereq{
+            height: 250px;
+            width: 130px;
+            /* clip-path: polygon(0% 0%, 100% 25%, 100% 100%, 0% 75%); */
+            transform: skewY(15deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #refl{
+            height: 150px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: #edeb7e98;
+            box-shadow: 0 0 10px #edeb7e;
+            
+            /* opacity: 0;
+            visibility: hidden;
+            transition: opacity 1s, visibility 1s; */
+        }
+        .right{
+            float: right;
+        }
+        .disp{
+            display: none;
+            /* opacity: 1;
+            visibility: visible; */
+        }
+    </style>
+</head>
+<body>
+    <div id="cont">
+        <div id="fonar">
+            <div id="qol">
+                <div id="knopka">
+                    <button onclick="calis()" id="yasil"></button>
+                </div>
+            </div>
+            <div id="bas"></div>
+            <div id="sari"></div>
+        </div>
+        <div id="vereq">
+            <div id="refl"></div>
+        </div>
+    </div>
+
+    <script>
+        let say=0;
+        const yasil=document.getElementById('yasil');
+        const sari=document.getElementById('sari');
+        const refl=document.getElementById('refl');
+
+        function calis(){
+            yasil.classList.toggle("right");
+            sari.classList.toggle("disp");
+            refl.classList.toggle("disp");
+        }
+        
+    </script>
+</body>
+</html>
